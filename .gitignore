@@ -1,32 +1,38 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+.idea
+/HW-1-1/cmake-build-debug/.ninja_deps
+/HW-1-1/cmake-build-debug/.ninja_log
+/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/a.exe
+/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/a.exe
+/HW-1-1/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/a.exe
+/HW-1-1/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/a.exe
+/HW-1-1/cmake-build-debug/build.ninja
+/HW-1-1/cmake-build-debug/.cmake/api/v1/query/cache-v2
+/HW-1-1/cmake-build-debug/.cmake/api/v1/reply/cache-v2-3e640ece389f5a4e6321.json
+/HW-1-1/cmake-build-debug/CMakeFiles/clion-environment.txt
+/HW-1-1/cmake-build-debug/CMakeFiles/clion-log.txt
+/HW-1-1/cmake-build-debug/CMakeFiles/cmake.check_cache
+/HW-1-1/cmake-build-debug/cmake_install.cmake
+/HW-1-1/cmake-build-debug/CMakeCache.txt
+/HW-1-1/cmake-build-debug/CMakeFiles/3.23.2/CMakeCCompiler.cmake
+/HW-1-1/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/CMakeCCompilerId.c
+/HW-1-1/cmake-build-debug/CMakeFiles/3.23.2/CMakeCXXCompiler.cmake
+/HW-1-1/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
+/HW-1-1/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin
+/HW-1-1/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_CXX.bin
+/HW-1-1/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1
+/HW-1-1/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-9d31e62d15a273fd825b.json
+/HW-1-1/cmake-build-debug/CMakeFiles/CMakeOutput.log
+/HW-1-1/cmake-build-debug/CMakeFiles/3.23.2/CMakeRCCompiler.cmake
+/HW-1-1/cmake-build-debug/CMakeFiles/3.23.2/CMakeSystem.cmake
+/HW-1-1/cmake-build-debug/.cmake/api/v1/query/codemodel-v2
+/HW-1-1/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-4e0f3226d20e5c3b00cf.json
+/HW-1-1/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json
+/HW-1-1/cmake-build-debug/CMakeFiles/HW-1-1.dir/HW-1-1.cpp.obj
+/HW-1-1/cmake-build-debug/HW-1-1.exe
+/HW-1-1/cmake-build-debug/.cmake/api/v1/reply/index-2022-10-02T16-50-26-0908.json
+/HW-1-1/cmake-build-debug/Testing/Temporary/LastTest.log
+/HW-1-1/cmake-build-debug/CMakeFiles/rules.ninja
+/HW-1-1/cmake-build-debug/.cmake/api/v1/reply/target-HW-1-1-Debug-d516520bd6e934221a20.json
+/HW-1-1/cmake-build-debug/CMakeFiles/TargetDirectories.txt
+/HW-1-1/cmake-build-debug/.cmake/api/v1/query/toolchains-v1
+/HW-1-1/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-2aa95edb22efbe90c0ad.json

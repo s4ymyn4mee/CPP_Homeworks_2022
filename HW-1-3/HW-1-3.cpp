@@ -3,9 +3,13 @@
 using namespace std;
 
 int main(){
-    float N, A, B, X, Y;
-    cin >> N >> A >> B >> X >> Y;
-    if (N>B) cout << N - N*Y/100;
-    else if (N>A) cout << N - N*X/100;
-    else cout << N;
+    float fullPrice, firstBorder, secondBorder, firstDiscount, secondDiscount;
+    cin >> fullPrice >> firstBorder >> secondBorder >> firstDiscount >> secondDiscount;
+    if (fullPrice > secondBorder)
+        cout << fullPrice - fullPrice * secondDiscount / 100;
+    else if (fullPrice > firstBorder)
+        cout << fullPrice - fullPrice * firstDiscount / 100;
+    else
+        cout << fullPrice;
+    return 0;
 }

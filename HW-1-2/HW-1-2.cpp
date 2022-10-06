@@ -4,10 +4,12 @@
 using namespace std;
 
 int main(){
-    float A, B, C, Disc;
-    cin >> A >> B >> C;
-    Disc = B*B - 4*A*C;
-    if (Disc>0) cout << (-B-sqrt(Disc))/2/A << " " << (-B+sqrt(Disc))/2/A;
-    else if (Disc==0) cout << -B/2/A;
+    float coefficientA, coefficientB, coefficientC;
+    cin >> coefficientA >> coefficientB >> coefficientC;
+    float discriminant = coefficientB * coefficientB - 4 * coefficientA * coefficientC;
+    if (discriminant > 0)
+        cout << (-coefficientB - sqrt(discriminant)) / (2 * coefficientA) << " " << (-coefficientB + sqrt(discriminant)) / (2 * coefficientA);
+    else if (discriminant == 0)
+        cout << -coefficientB / (2 * coefficientA);
     return 0;
 }

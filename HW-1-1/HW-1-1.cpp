@@ -4,11 +4,15 @@
 using namespace std;
 
 int main() {
-    float x1, x2, x3, y1, y2, y3, xh, yh, distance;
-    cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
-    distance = (abs((y2 - y1) * x3 - (x2 - x1) * y3 + y1 * x2 - x1 * y2)) / (sqrt((y2 - y1) * (y2 - y1) + (x2 - x1) * (x2 - x1)));
-    xh = ((x1-x2)*(x1-x2)*x3 + (x2-x1)*(y2-y1)*y3 - (y1*x2 - x1*y2)*(y2-y1))/((y2-y1)*(y2-y1)+(x2-x1)*(x2-x1));
-    if (y2!=y1) yh = ((x1-x2)*xh + (y2-y1)*y3 + (x2-x1)*x3)/(y2-y1);
-    else yh = y1;
-    cout << distance << " " << xh << " " << yh;
+    float xLineFirst, xLineSecond, yLineFirst, yLineSecond, xPoint, yPoint;
+    cin >> xLineFirst >> yLineFirst >> xLineSecond >> yLineSecond >> xPoint >> yPoint;
+    float distance = (abs((yLineSecond - yLineFirst) * xPoint - (xLineSecond - xLineFirst) * yPoint + yLineFirst * xLineSecond - xLineFirst * yLineSecond)) / (sqrt((yLineSecond - yLineFirst) * (yLineSecond - yLineFirst) + (xLineSecond - xLineFirst) * (xLineSecond - xLineFirst)));
+    float xCrossing = ((xLineFirst - xLineSecond) * (xLineFirst - xLineSecond) * xPoint + (xLineSecond - xLineFirst) * (yLineSecond - yLineFirst) * yPoint - (yLineFirst * xLineSecond - xLineFirst * yLineSecond) * (yLineSecond - yLineFirst)) / ((yLineSecond - yLineFirst) * (yLineSecond - yLineFirst) + (xLineSecond - xLineFirst) * (xLineSecond - xLineFirst));
+    float yCrossing;
+    if (yLineSecond != yLineFirst)
+        yCrossing = ((xLineFirst - xLineSecond) * xCrossing + (yLineSecond - yLineFirst) * yPoint + (xLineSecond - xLineFirst) * xPoint) / (yLineSecond - yLineFirst);
+    else
+        yCrossing = yLineFirst;
+    cout << distance << " " << xCrossing << " " << yCrossing;
+    return 0;
 }

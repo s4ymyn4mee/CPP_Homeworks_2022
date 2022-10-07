@@ -4,12 +4,12 @@
 using namespace std;
 
 int main(){
-    float coefficientA, coefficientB, coefficientC;
-    cin >> coefficientA >> coefficientB >> coefficientC;
-    float discriminant = coefficientB * coefficientB - 4 * coefficientA * coefficientC;
+    float quadratic, linear, freeTerm;
+    cin >> quadratic >> linear >> freeTerm;
+    float discriminant = linear * linear - 4 * quadratic * freeTerm;
     if (discriminant > 0)
-        cout << (-coefficientB - sqrt(discriminant)) / (2 * coefficientA) << " " << (-coefficientB + sqrt(discriminant)) / (2 * coefficientA);
+        cout << (-linear - sqrt(discriminant)) / (2 * quadratic) << " " << (-linear + sqrt(discriminant)) / (2 * quadratic);
     else if (discriminant == 0)
-        cout << -coefficientB / (2 * coefficientA);
+        cout << -linear / (2 * quadratic);
     return 0;
 }

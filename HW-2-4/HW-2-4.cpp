@@ -3,16 +3,16 @@
 
 using namespace std;
 
-int findingMinCoordinate(int a, int b, int c, int d) {
-    int min1 = min(a, b);
-    int min2 = min(c, d);
-    return min(min1, min2);
+int findingMinCoordinate(int pointFirst, int pointSecond, int pointThird, int pointFourth) {
+    int minimalFirst = min(pointFirst, pointSecond);
+    int minimalSecond = min(pointThird, pointFourth);
+    return min(minimalFirst, minimalSecond);
 }
 
-int findingMaxCoordinate(int a, int b, int c, int d) {
-    int max1 = max(a, b);
-    int max2 = max(c, d);
-    return max(max1, max2);
+int findingMaxCoordinate(int pointFirst, int pointSecond, int pointThird, int pointFourth) {
+    int maximumFirst = max(pointFirst, pointSecond);
+    int maximumSecond = max(pointThird, pointFourth);
+    return max(maximumFirst, maximumSecond);
 }
 
 int main() {

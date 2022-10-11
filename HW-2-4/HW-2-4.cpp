@@ -3,15 +3,15 @@
 
 using namespace std;
 
-int findingMinCoordinate(int pointFirst, int pointSecond, int pointThird, int pointFourth) {
-    int minimalFirst = min(pointFirst, pointSecond);
-    int minimalSecond = min(pointThird, pointFourth);
+int findMinCoordinate(int firstPoint, int secondPoint, int thirdPoint, int fourthPoint) {
+    int minimalFirst = min(firstPoint, secondPoint);
+    int minimalSecond = min(thirdPoint, fourthPoint);
     return min(minimalFirst, minimalSecond);
 }
 
-int findingMaxCoordinate(int pointFirst, int pointSecond, int pointThird, int pointFourth) {
-    int maximumFirst = max(pointFirst, pointSecond);
-    int maximumSecond = max(pointThird, pointFourth);
+int findMaxCoordinate(int firstPoint, int secondPoint, int thirdPoint, int fourthPoint) {
+    int maximumFirst = max(firstPoint, secondPoint);
+    int maximumSecond = max(thirdPoint, fourthPoint);
     return max(maximumFirst, maximumSecond);
 }
 
@@ -24,21 +24,21 @@ int main() {
         >> firstRectangleThirdX >> firstRectangleThirdY >> firstRectangleFourthX >> firstRectangleFourthY
         >> secondRectangleFirstX >> secondRectangleFirstY >> secondRectangleSecondX >> secondRectangleSecondY
         >> secondRectangleThirdX >> secondRectangleThirdY >> secondRectangleFourthX >> secondRectangleFourthY;
-    int firstRectangleMinimalX = findingMinCoordinate(firstRectangleFirstX, firstRectangleSecondX, firstRectangleThirdX,
+    int firstRectangleMinimalX = findMinCoordinate(firstRectangleFirstX, firstRectangleSecondX, firstRectangleThirdX,
                                                       firstRectangleFourthX);
-    int firstRectangleMinimalY = findingMinCoordinate(firstRectangleFirstY, firstRectangleSecondY, firstRectangleThirdY,
+    int firstRectangleMinimalY = findMinCoordinate(firstRectangleFirstY, firstRectangleSecondY, firstRectangleThirdY,
                                                       firstRectangleFourthY);
-    int secondRectangleMinimalX = findingMinCoordinate(secondRectangleFirstX, secondRectangleSecondX,
+    int secondRectangleMinimalX = findMinCoordinate(secondRectangleFirstX, secondRectangleSecondX,
                                                        secondRectangleThirdX, secondRectangleFourthX);
-    int secondRectangleMinimalY = findingMinCoordinate(secondRectangleFirstY, secondRectangleSecondY,
+    int secondRectangleMinimalY = findMinCoordinate(secondRectangleFirstY, secondRectangleSecondY,
                                                        secondRectangleThirdY, secondRectangleFourthY);
-    int firstRectangleMaximumX = findingMaxCoordinate(firstRectangleFirstX, firstRectangleSecondX, firstRectangleThirdX,
+    int firstRectangleMaximumX = findMaxCoordinate(firstRectangleFirstX, firstRectangleSecondX, firstRectangleThirdX,
                                                       firstRectangleFourthX);
-    int firstRectangleMaximumY = findingMaxCoordinate(firstRectangleFirstY, firstRectangleSecondY, firstRectangleThirdY,
+    int firstRectangleMaximumY = findMaxCoordinate(firstRectangleFirstY, firstRectangleSecondY, firstRectangleThirdY,
                                                       firstRectangleFourthY);
-    int secondRectangleMaximumX = findingMaxCoordinate(secondRectangleFirstX, secondRectangleSecondX,
+    int secondRectangleMaximumX = findMaxCoordinate(secondRectangleFirstX, secondRectangleSecondX,
                                                        secondRectangleThirdX, secondRectangleFourthX);
-    int secondRectangleMaximumY = findingMaxCoordinate(secondRectangleFirstY, secondRectangleSecondY,
+    int secondRectangleMaximumY = findMaxCoordinate(secondRectangleFirstY, secondRectangleSecondY,
                                                        secondRectangleThirdY, secondRectangleFourthY);
     int xCrossing =
             min(firstRectangleMaximumX, secondRectangleMaximumX) - max(firstRectangleMinimalX, secondRectangleMinimalX);

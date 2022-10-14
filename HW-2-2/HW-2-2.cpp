@@ -18,4 +18,5 @@ int main(){
         cout << -1;
     if (fCounter == 0)
         cout << -2;
+    return 0;
 }

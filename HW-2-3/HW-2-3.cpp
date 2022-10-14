@@ -4,12 +4,13 @@
 using namespace std;
 
 int main(){
-    int Number, scaleOfNotation;
-    cin >> Number >> scaleOfNotation;
+    int number, scaleOfNotation;
+    cin >> number >> scaleOfNotation;
     string transferredNumber = "";
-    while (Number > 0){
-        transferredNumber = to_string(Number % scaleOfNotation) + transferredNumber;
-        Number /= scaleOfNotation;
+    while (number > 0){
+        transferredNumber = to_string(number % scaleOfNotation) + transferredNumber;
+        number /= scaleOfNotation;
     }
     cout << transferredNumber;
+    return 0;
 }

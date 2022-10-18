@@ -4,14 +4,16 @@
 using namespace std;
 
 int main(){
-    string stringLine;
-    getline(cin, stringLine);
+    string line;
+    getline(cin, line);
     int fCounter = 0;
-    for (int i = 0; i < stringLine.length(); i ++){
-        if (stringLine[i] == 'f'){
-            fCounter ++;
-            if (fCounter == 2)
+    for (int i = 0; i < line.length(); i++){
+        if (line[i] == 'f'){
+            fCounter++;
+            if (fCounter == 2) {
                 cout << i;
+                break;
+            }
         }
     }
     if (fCounter == 1)

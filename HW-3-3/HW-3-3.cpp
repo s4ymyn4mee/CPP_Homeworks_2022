@@ -5,22 +5,20 @@ using namespace std;
 int main() {
     int sortedArrayOfNumbers[10];
     int sumOfTwoNumbers;
-    bool bFlag = 1;
     for (int i = 0; i < 10; i++)
         cin >> sortedArrayOfNumbers[i];
     cin >> sumOfTwoNumbers;
-    for (int i = 0; i < 9; i++) {
-        for (int j = 9; j > i; j--){
-            if (sortedArrayOfNumbers[i] + sortedArrayOfNumbers[j] < sumOfTwoNumbers)
-                break;
-            else if (sortedArrayOfNumbers[i] + sortedArrayOfNumbers[j] == sumOfTwoNumbers) {
-                cout << sortedArrayOfNumbers[i] << " " << sortedArrayOfNumbers[j];
-                bFlag = 0;
-                break;
-            }
+    int i = 0, j = 9;
+    while (i != j) {
+        if (sortedArrayOfNumbers[i] + sortedArrayOfNumbers[j] < sumOfTwoNumbers)
+            i++;
+        else if (sortedArrayOfNumbers[i] + sortedArrayOfNumbers[j] > sumOfTwoNumbers)
+            j--;
+        else {
+            cout << sortedArrayOfNumbers[i] << " " << sortedArrayOfNumbers[j];
+            return 0;
         }
     }
-    if (bFlag)
-        cout << 0;
+    cout << 0;
     return 0;
 }

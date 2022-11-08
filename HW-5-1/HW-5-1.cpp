@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -26,8 +27,12 @@ string clearString(string line) {
 }
 
 int main() {
+    fstream fin("C:\\Users\\perpuk\\CLionProjects\\HW-5-1\\input.txt");
+    ofstream fout("C:\\Users\\perpuk\\CLionProjects\\HW-5-1\\output.txt");
     string line;
-    getline(cin, line);
-    cout << clearString(line) << endl;
+    fin >> line;
+    fout << clearString(line);
+    fin.close();
+    fout.close();
     return 0;
 }

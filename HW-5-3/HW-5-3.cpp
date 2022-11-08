@@ -24,6 +24,7 @@ string deleteWordsLessLength(string line, int lengthOfWord) {
     }
     return newLine;
 }
+
 string deleteExtraSpaces(string line) {
     string newLine = "";
     int flagOfStartSpaces = 0;
@@ -51,6 +52,7 @@ string deleteExtraSpaces(string line) {
         newLine.erase(newLine.size() - 1);
     return newLine;
 }
+
 int main() {
     fstream fin("C:\\Users\\perpuk\\CLionProjects\\HW-5-3\\input.txt");
     ofstream fout("C:\\Users\\perpuk\\CLionProjects\\HW-5-3\\output.txt");

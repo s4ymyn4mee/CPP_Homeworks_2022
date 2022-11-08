@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -51,10 +52,14 @@ string deleteExtraSpaces(string line) {
     return newLine;
 }
 int main() {
+    fstream fin("C:\\Users\\perpuk\\CLionProjects\\HW-5-3\\input.txt");
+    ofstream fout("C:\\Users\\perpuk\\CLionProjects\\HW-5-3\\output.txt");
     string line;
     int lengthOfWord;
-    cin >> lengthOfWord;
-    getline(cin, line);
-    cout << deleteExtraSpaces(deleteWordsLessLength(line, lengthOfWord));
+    fin >> lengthOfWord;
+    getline(fin, line);
+    fout << deleteExtraSpaces(deleteWordsLessLength(line, lengthOfWord));
+    fin.close();
+    fout.close();
     return 0;
 }

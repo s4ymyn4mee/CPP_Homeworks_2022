@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -17,7 +18,7 @@ string deleteExtraSpaces(string line){
             if (flagOfStartSpaces == 0)
                 i++;
             else{
-                newLine += ' ';
+                newLine += " ";
                 int countOfSpaces = 0, j = i;
                 while (line[j] == ' ' && j < line.length()){
                     countOfSpaces++;
@@ -32,8 +33,12 @@ string deleteExtraSpaces(string line){
     return newLine;
 }
 int main(){
+    fstream fin("C:\\Users\\perpuk\\CLionProjects\\HW-5-2\\input.txt");
+    ofstream fout("C:\\Users\\perpuk\\CLionProjects\\HW-5-2\\output.txt");
     string line;
-    getline(cin, line);
-    cout << deleteExtraSpaces(line);
+    getline(fin, line);
+    fout << deleteExtraSpaces(line);
+    fin.close();
+    fout.close();
     return 0;
 }

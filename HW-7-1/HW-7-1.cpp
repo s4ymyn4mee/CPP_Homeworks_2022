@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void bubbleSort(int *array){
+void bubbleSort(int *array) {
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j < 9 - i; j++) {
             if (array[j] > array[j + 1]) {
@@ -13,7 +13,8 @@ void bubbleSort(int *array){
         }
     }
 }
-int main(){
+
+int main() {
     int array[10];
     for (int i = 0; i < 10; i++)
         cin >> array[i];

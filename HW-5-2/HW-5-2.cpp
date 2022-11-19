@@ -32,6 +32,7 @@ string deleteExtraSpaces(string line){
         newLine.erase(newLine.size() - 1);
     return newLine;
 }
+
 int main(){
     fstream fin("C:\\Users\\perpuk\\CLionProjects\\HW-5-2\\input.txt");
     ofstream fout("C:\\Users\\perpuk\\CLionProjects\\HW-5-2\\output.txt");

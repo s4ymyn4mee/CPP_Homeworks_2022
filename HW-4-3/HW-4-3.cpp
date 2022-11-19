@@ -3,37 +3,67 @@
 
 using namespace std;
 
-int main(){
-    string line, editedLine, substring = "";
-    getline(cin, line);
-    int i = 0, flagOfClosingBracket, flagOfLastClosingBracket = 1;
-    while (i < line.length()){
-        if (line[i] == '(') {
-            flagOfClosingBracket = 1;
-            for (int j = i; j < line.length(); j++){
-                if (line[j] != ')')
-                    substring += line[j];
-                else{
-                    for (int q = j; q < line.length(); q++){
-                        if (line[q] == ')')
-                            flagOfLastClosingBracket = 1;
-                    }
-                    if (flagOfLastClosingBracket == 0) {
-                        substring = "";
-                        i = j + 1;
-                        flagOfClosingBracket = 0;
-                        break;
-                    }
-                }
-            }
-            if (flagOfClosingBracket == 1)
-                editedLine += substring;
-            flagOfClosingBracket = 1;
-        }
-        else {
-            editedLine += line[i];
+string deleteExtraSpaces(string line) {
+    string newLine = "";
+    int flagOfStartSpaces = 0;
+    int i = 0;
+    while (i < line.length()) {
+        if (line[i] != ' ') {
+            newLine += line[i];
+            flagOfStartSpaces = 1;
             i++;
+        } else {
+            if (flagOfStartSpaces == 0)
+                i++;
+            else {
+                newLine += " ";
+                int countOfSpaces = 0, j = i;
+                while (line[j] == ' ' && j < line.length()) {
+                    countOfSpaces++;
+                    j++;
+                }
+                i += countOfSpaces;
+            }
         }
     }
-    cout << editedLine;
+    if (newLine[newLine.size() - 1] == ' ')
+        newLine.erase(newLine.size() - 1);
+    return newLine;
+}
+
+string deleteInBrackets(string line) {
+    int countOfOpeningBrackets = 0;
+    int i = 0;
+    int countOfClosingBrackets = 0;
+    string editedLine = "";
+    while (i < line.length()) {
+        if (line[i] != '(')
+            editedLine += line[i++];
+        else {
+            countOfOpeningBrackets++;
+            int j = i + 1;
+            while (countOfClosingBrackets != countOfOpeningBrackets) {
+                if (line[j] == '(') {
+                    countOfOpeningBrackets++;
+                    j++;
+                }
+                else if (line[j] == ')') {
+                    countOfClosingBrackets++;
+                    j++;
+                }
+                else
+                    j++;
+            }
+            countOfOpeningBrackets = 0;
+            countOfClosingBrackets = 0;
+            i = j;
+        }
+    }
+    return deleteExtraSpaces(editedLine);
+}
+
+int main() {
+    string line;
+    getline(cin, line);
+    cout << deleteInBrackets(line);
 }

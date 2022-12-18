@@ -1,0 +1,24 @@
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+--- a/.gitignore	
++++ b/.gitignore	
+@@ -141,3 +141,15 @@
+ /.idea/vcs.xml
+ /HW-1-1/.idea/vcs.xml
+ /.idea/workspace.xml
++/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_10_2022_16_14_[Changes]/CMakeDetermineCompilerABI_C.bin
++/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_10_2022_16_14_[Changes]1/CMakeDetermineCompilerABI_C.bin
++/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_10_2022_16_14_[Changes]/CMakeDetermineCompilerABI_CXX.bin
++/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_10_2022_16_14_[Changes]1/CMakeDetermineCompilerABI_CXX.bin
++/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_10_2022_16_14_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_10_2022_16_14_[Changes]1/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_10_2022_16_14_[Changes]/CMakeDetermineCompilerABI_C.bin
++/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_10_2022_16_14_[Changes]1/CMakeDetermineCompilerABI_C.bin
++/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_10_2022_16_14_[Changes]/CMakeDetermineCompilerABI_CXX.bin
++/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_10_2022_16_14_[Changes]1/CMakeDetermineCompilerABI_CXX.bin
++/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_10_2022_16_14_[Changes]/shelved.patch
++/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_10_2022_16_14_[Changes]1/shelved.patch

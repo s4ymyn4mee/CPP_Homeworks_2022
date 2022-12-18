@@ -1,0 +1,8 @@
+Index: HW-5-2/output.txt
+===================================================================
+diff --git a/HW-5-2/output.txt b/HW-5-2/output.txt
+--- a/HW-5-2/output.txt	
++++ b/HW-5-2/output.txt	
+@@ -1,1 +1,0 @@
+-Extra probely ne nujni senya krut
+\ No newline at end of file

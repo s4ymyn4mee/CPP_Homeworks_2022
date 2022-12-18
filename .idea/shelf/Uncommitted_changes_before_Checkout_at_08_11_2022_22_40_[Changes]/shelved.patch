@@ -1,0 +1,27 @@
+Index: HW-5-2/HW-5-2.cpp
+===================================================================
+diff --git a/HW-5-2/HW-5-2.cpp b/HW-5-2/HW-5-2.cpp
+--- a/HW-5-2/HW-5-2.cpp	
++++ b/HW-5-2/HW-5-2.cpp	
+@@ -1,5 +1,6 @@
+ #include <iostream>
+ #include <string>
++#include <fstream>
+ 
+ using namespace std;
+ 
+@@ -32,8 +33,12 @@
+     return newLine;
+ }
+ int main(){
++    fstream fin("C:\\Users\\perpuk\\CLionProjects\\HW-5-2\\input.txt");
++    ofstream fout("C:\\Users\\perpuk\\CLionProjects\\HW-5-2\\output.txt");
+     string line;
+-    getline(cin, line);
+-    cout << deleteExtraSpaces(line);
++    fin >> line;
++    fout << deleteExtraSpaces(line);
++    fin.close();
++    fout.close();
+     return 0;
+ }

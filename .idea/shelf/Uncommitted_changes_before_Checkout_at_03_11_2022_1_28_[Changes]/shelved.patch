@@ -1,0 +1,44 @@
+Index: HW-5-2/HW-5-2.cpp
+===================================================================
+diff --git a/HW-5-2/HW-5-2.cpp b/HW-5-2/HW-5-2.cpp
+--- a/HW-5-2/HW-5-2.cpp	
++++ b/HW-5-2/HW-5-2.cpp	
+@@ -3,23 +3,22 @@
+ 
+ using namespace std;
+ 
+-string deleteExtraSpaces(string line){
++string deleteExtraSpaces(string line) {
+     string newLine = "";
+     int flagOfStartSpaces = 0;
+     int i = 0;
+-    while (i < line.length()){
++    while (i < line.length()) {
+         if (line[i] != ' ') {
+             newLine += line[i];
+             flagOfStartSpaces = 1;
+             i++;
+-        }
+-        else {
++        } else {
+             if (flagOfStartSpaces == 0)
+                 i++;
+-            else{
++            else {
+                 newLine += ' ';
+                 int countOfSpaces = 0, j = i;
+-                while (line[j] == ' ' && j < line.length()){
++                while (line[j] == ' ' && j < line.length()) {
+                     countOfSpaces++;
+                     j++;
+                 }
+@@ -31,7 +30,8 @@
+         newLine.erase(newLine.size() - 1);
+     return newLine;
+ }
+-int main(){
++
++int main() {
+     string line;
+     getline(cin, line);
+     cout << deleteExtraSpaces(line);

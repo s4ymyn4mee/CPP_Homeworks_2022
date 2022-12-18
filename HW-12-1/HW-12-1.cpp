@@ -7,7 +7,7 @@ int main() {
     set<string> setOfWords;
     int amountOfWords;
     cin >> amountOfWords;
-    for (int i = 0; i < amountOfWords; i++) {
+    for (int i = 0; i < amountOfWords; i++){
         string element;
         cin >> element;
         setOfWords.insert(element);

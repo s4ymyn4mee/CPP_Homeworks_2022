@@ -24,7 +24,6 @@ public:
             delete pCurrentNode;
             pCurrentNode = pNextNode;
         }
-        delete pHead;
         pHead = nullptr;
     }
 

@@ -9,46 +9,47 @@ public:
 
 class LinkedListStack {
 private:
-    Node *pHead;
+    Node *pTop;
 public:
 
     LinkedListStack() {
-        pHead = nullptr;
+        pTop = nullptr;
     }
 
     ~LinkedListStack() {
-        Node *pCurrentNode = pHead;
+        Node *pCurrentNode = pTop;
         Node *pNextNode = nullptr;
         while (pCurrentNode != nullptr) {
             pNextNode = pCurrentNode->pNext;
             delete pCurrentNode;
             pCurrentNode = pNextNode;
         }
-        pHead = nullptr;
+        delete pTop;
+        pTop = nullptr;
     }
 
     void Push(int value) {
         Node *pNewNode = new Node;
         pNewNode->value = value;
-        pNewNode->pNext = pHead;
-        pHead = pNewNode;
+        pNewNode->pNext = pTop;
+        pTop = pNewNode;
     }
 
     int Pop() {
-        int temporaryValue = pHead->value;
-        Node *pTemporary = pHead;
-        pHead = pHead->pNext;
+        int temporaryValue = pTop->value;
+        Node *pTemporary = pTop;
+        pTop = pTop->pNext;
         delete pTemporary;
         pTemporary = nullptr;
         return temporaryValue;
     }
 
     int GetTop() {
-        return pHead->value;
+        return pTop->value;
     }
 
     void PrintLinkedList() {
-        Node *pTemporary = pHead;
+        Node *pTemporary = pTop;
         while (pTemporary != nullptr) {
             std::cout << pTemporary->value << " ";
             pTemporary = pTemporary->pNext;

@@ -10,54 +10,56 @@ public:
 
 class LinkedListQueue {
 private:
-    Node *pHead;
+    Node *pFront;
+    Node *pRear;
 public:
 
     LinkedListQueue() {
-        pHead = nullptr;
+        pRear = nullptr;
+        pFront = nullptr;
     }
 
     ~LinkedListQueue() {
-        Node *pCurrentNode = pHead;
+        Node *pCurrentNode = pFront;
         Node *pNextNode = nullptr;
         while (pCurrentNode != nullptr) {
             pNextNode = pCurrentNode->pNext;
             delete pCurrentNode;
             pCurrentNode = pNextNode;
         }
-        pHead = nullptr;
+        pRear = nullptr;
+        pFront = nullptr;
     }
 
     void Enqueue(int value) {
         Node *pNewNode = new Node;
         pNewNode->value = value;
-        if (pHead == nullptr) {
-            pNewNode->pNext = pHead;
-            pHead = pNewNode;
-        } else {
-            Node *pTemporary = pHead;
-            while (pTemporary->pNext != nullptr)
-                pTemporary = pTemporary->pNext;
-            pNewNode->pNext = nullptr;
-            pTemporary->pNext = pNewNode;
+        if (pRear == nullptr) {
+            pRear = pNewNode;
+            pFront = pNewNode;
         }
+        else {
+            pRear->pNext = pNewNode;
+            pRear = pNewNode;
+        }
+        pNewNode->pNext = nullptr;
     }
 
     int Dequeue() {
-        int temporaryValue = pHead->value;
-        Node *pTemporary = pHead;
-        pHead = pHead->pNext;
+        int temporaryValue = pFront->value;
+        Node *pTemporary = pFront;
+        pFront = pFront->pNext;
         delete pTemporary;
         pTemporary = nullptr;
         return temporaryValue;
     }
 
     int GetFirst() {
-        return pHead->value;
+        return pFront->value;
     }
 
     void PrintLinkedList() {
-        Node *pTemporary = pHead;
+        Node *pTemporary = pFront;
         while (pTemporary != nullptr) {
             std::cout << pTemporary->value << " ";
             pTemporary = pTemporary->pNext;

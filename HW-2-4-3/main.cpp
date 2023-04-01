@@ -9,6 +9,14 @@ int main() {
     list.Enqueue(10);
     list.Enqueue(15);
     list.PrintLinkedList();
-    cout << endl << list.GetFirst() << " " << list.Dequeue() << " " <<  list.Dequeue();
+    list.Enqueue(43);
+    std::cout << std::endl;
+    list.PrintLinkedList();
+    std::cout << std::endl;
+    std::cout << list.Dequeue() << std::endl;
+    std::cout << list.Dequeue() << std::endl;
+    list.PrintLinkedList();
+    std::cout << std::endl << list.GetFirst() << std::endl;
+    list.PrintLinkedList();
     return 0;
 }

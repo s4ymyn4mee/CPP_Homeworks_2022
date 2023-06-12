@@ -11,6 +11,6 @@ int main() {
     graph.AddEdge(3, 4);
     graph.AddEdge(4, 5);
     //graph.Print();
-    std::cout << graph.BfsShortestPath(graph, 0, 5);
+    std::cout << graph.BfsShortestPath(graph, 5, 0);
     return 0;
 }
